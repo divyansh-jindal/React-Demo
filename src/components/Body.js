@@ -1,9 +1,21 @@
 import RestrauntCard from "./RestrauntCard";
 import resList from "../utils/mockData";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const Body = () => {
   const [listOfRestraunts, setListOfRestraunts] = useState(resList);
+
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    const data = await fetch();
+    const json = await data.json();
+
+    console.log(json);
+  };
+
   return (
     <div className="body">
       <div className="filter">
