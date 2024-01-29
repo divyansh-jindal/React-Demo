@@ -18,7 +18,7 @@ const Body = () => {
 
     console.log(json);
     setListOfRestraunts(
-      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
 
@@ -28,6 +28,10 @@ const Body = () => {
   return (
     <div className="body">
       <div className="filter">
+        <div className="search">
+          <input type="text" className="search-box" />
+          <button onClick={() => {}}>Search</button>
+        </div>
         <button
           className="filter-btn"
           onClick={() => {
