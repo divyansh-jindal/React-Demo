@@ -5,20 +5,20 @@ import UserClass from "./UserClass";
 class About extends React.Component {
   constructor(props) {
     super(props);
-    console.log("Parent Constructor");
+    // console.log("Parent Constructor");
   }
   componentDidMount() {
-    console.log("Parent componentDidMount");
+    // console.log("Parent componentDidMount");
   }
   render() {
-    console.log("Parent Render");
+    // console.log("Parent Render");
     return (
       <div>
         <h1>About</h1>
         <h2>This a demo project</h2>
         {/* <User name={"Divyansh Jindal (FC)"} /> */}
         <UserClass name={"Divyansh (CC)"} location={"IIIT Una class"} />
-        <UserClass name={"Jindal (CC)"} location={"IIIT Una class"} />
+        {/* <UserClass name={"Jindal (CC)"} location={"IIIT Una class"} /> */}
       </div>
     );
   }
