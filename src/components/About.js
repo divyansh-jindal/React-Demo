@@ -17,7 +17,8 @@ class About extends React.Component {
         <h1>About</h1>
         <h2>This a demo project</h2>
         {/* <User name={"Divyansh Jindal (FC)"} /> */}
-        <UserClass name={"Divyansh Jindal (CC)"} location={"IIIT Una class"} />
+        <UserClass name={"Divyansh (CC)"} location={"IIIT Una class"} />
+        <UserClass name={"Jindal (CC)"} location={"IIIT Una class"} />
       </div>
     );
   }
