@@ -1,7 +1,7 @@
 import RestrauntCard from "./RestrauntCard";
-import resList from "../utils/mockData";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 import Shimmer from "./Shimmer";
 
 const Body = () => {
@@ -28,9 +28,17 @@ const Body = () => {
     );
   };
 
+  const onlineStatus = useOnlineStatus();
+
+  if (onlineStatus === false)
+    return (
+      <h1>Looks like you,re offline!! Please check ur Internet connection</h1>
+    );
+
   if (listOfRestraunts.length === 0) {
     return <Shimmer />;
   }
+
   return (
     <div className="body">
       <div className="filter">
