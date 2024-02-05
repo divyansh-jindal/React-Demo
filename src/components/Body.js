@@ -2,12 +2,15 @@ import RestrauntCard from "./RestrauntCard";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import useOnlineStatus from "../utils/useOnlineStatus";
+// import PromotedRes from "./PromotedRes";
 import Shimmer from "./Shimmer";
 
 const Body = () => {
   const [listOfRestraunts, setListOfRestraunts] = useState([]);
   const [filteredListOfRestraunts, setFilteredListOfRestraunts] = useState([]);
   const [searchText, setSearchText] = useState("");
+
+  // const RestrauntCardPromoted = PromotedRes(RestrauntCard);
 
   useEffect(() => {
     fetchData();
@@ -88,6 +91,11 @@ const Body = () => {
               key={restraunt.info.id}
               to={"/restaurants/" + restraunt.info.id}
             >
+              {/* {restraunt.data.promoted ? (
+                <RestrauntCardPromoted resData={restraunt} />
+              ) : (
+                <RestrauntCard resData={restraunt} />
+              )} */}
               <RestrauntCard resData={restraunt} />
             </Link>
           ))
