@@ -41,17 +41,19 @@ const Body = () => {
 
   return (
     <div className="body">
-      <div className="filter">
-        <div className="search">
+      <div className="filter flex">
+        <div className="search m-4 p-4">
           <input
             type="text"
-            className="search-box"
+            className="border border-solid border-black rounded-lg"
             value={searchText}
             onChange={(e) => {
               setSearchText(e.target.value);
             }}
           />
+
           <button
+            className="px-4 py-1 bg-green-100 m-4 border rounded-lg"
             onClick={() => {
               // console.log(searchText);
               const filteredRes = listOfRestraunts.filter((res) =>
@@ -63,20 +65,22 @@ const Body = () => {
             Search
           </button>
         </div>
-        <button
-          className="filter-btn"
-          onClick={() => {
-            const filteredList = listOfRestraunts.filter(
-              (res) => res.info.avgRating > 4
-            );
-            setListOfRestraunts(filteredList);
-            // console.log(listOfRestraunts);
-          }}
-        >
-          Top Rated Restraunts
-        </button>
+        <div className="search m-4 p-4 flex items-center">
+          <button
+            className="px-4 py-1 bg-gray-100 border rounded-lg"
+            onClick={() => {
+              const filteredList = listOfRestraunts.filter(
+                (res) => res.info.avgRating > 4
+              );
+              setListOfRestraunts(filteredList);
+              // console.log(listOfRestraunts);
+            }}
+          >
+            Top Rated Restraunts
+          </button>
+        </div>
       </div>
-      <div className="res-container">
+      <div className="res-container flex flex-wrap">
         {
           /* <RestrauntCard resData={resList[0]} /> */
           filteredListOfRestraunts.map((restraunt) => (

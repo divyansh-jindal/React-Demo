@@ -18,9 +18,12 @@ const RestrauntCard = (props) => {
   } = resData?.info;
 
   return (
-    <div className="res-card" style={styleCard}>
-      <img className="res-logo" src={CDN_URL + cloudinaryImageId}></img>
-      <h3>{name}</h3>
+    <div className="res-card m-4 p-4 w-[270px] rounded-lg bg-gray-100 transition-all duration-300 ease-in-out hover:bg-gray-200">
+      <img
+        className="res-logo rounded-lg"
+        src={CDN_URL + cloudinaryImageId}
+      ></img>
+      <h3 className="font-bold py-4 text-lg text-center">{name}</h3>
       <h4>{cuisines.join(", ")}</h4>
       <h4>{costForTwo}</h4>
       <h4>{avgRatingString} rating</h4>
