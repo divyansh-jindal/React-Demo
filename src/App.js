@@ -27,7 +27,7 @@ import RestaurantMenu from "./components/RestaurantMenu";
 // const root = ReactDOM.createRoot(document.getElementById("root"));
 // root.render(parent);
 
-// // const heading = React.createElement("h1", { id: "heading" }, "Hello");
+// // const heading = React.createElement("h1", { id: "heading" }, "Hello its me");
 // const Title = () => <h1>This is title component</h1>;
 // const HeadingComponent = () => {
 //   return (
